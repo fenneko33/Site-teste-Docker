@@ -40,6 +40,12 @@
             letter-spacing: 0.5px;
         }
 
+        #subtitulo {
+            font-family: sans-serif;
+            color: #FF69B4;
+            margin-left: 10%;
+        } 
+
         h2 span {
             color: var(--neru-yellow);
         }
