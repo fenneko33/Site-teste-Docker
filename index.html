@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Deck - MTG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registro de Deck <span>MTG</span></h2>
+    
+    <form action="/api/salvar-deck" method="POST">
+        
+        <div class="form-group">
+            <label class="main-label" for="nome_deck">Nome do Deck:</label>
+            <input type="text" id="nome_deck" name="nome_deck" placeholder="Ex: Goblins Furiosos" required>
+        </div>
+
+        <div class="form-group">
+            <label class="main-label" for="formato">Formato:</label>
+            <select id="formato" name="formato" required>
+                <option value="commander">Commander</option>
+                <option value="standard">Standard</option>
+                <option value="modern">Modern</option>
+                <option value="pauper">Pauper</option>
+                <option value="legacy">Legacy</option>
+            </select>
+        </div>
+
+        <!-- Grupo de Checkboxes atualizado -->
+        <div class="form-group">
+            <label class="main-label">Cores da Identidade:</label>
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="cores[]" value="Branco"> Branco
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="cores[]" value="Azul"> Azul
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="cores[]" value="Preto"> Preto
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="cores[]" value="Vermelho"> Vermelho
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="cores[]" value="Verde"> Verde
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="cores[]" value="Incolor"> Incolor
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="main-label" for="estrategia">Estratégia Principal:</label>
+            <select id="estrategia" name="estrategia" required>
+                <option value="aggro">Aggro (Agressivo)</option>
+                <option value="control">Control (Controle)</option>
+                <option value="combo">Combo</option>
+                <option value="midrange">Midrange</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="main-label" for="carta_principal">Comandante / Carta Chave:</label>
+            <input type="text" id="carta_principal" name="carta_principal" placeholder="Ex: Krenko, Mob Boss" required>
+        </div>
+
+        <button type="submit">Salvar no Banco de Dados</button>
+    </form>
+</div>
+
+</body>
+</html>
