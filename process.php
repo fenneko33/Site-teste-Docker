@@ -1,9 +1,9 @@
 <?php
 // Credenciais configuradas no docker-compose.yml
 $servidor = "db"; 
-$usuario = "usuario_site";
-$senha = "senha123";
-$banco = "atividade_db";
+$usuario = "[usuario]";
+$senha = "[senha]";
+$banco = "[nome do banco]";
 
 // Cria a conexão com o banco
 $conexao = new mysqli($servidor, $usuario, $senha, $banco);
