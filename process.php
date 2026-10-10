@@ -30,7 +30,7 @@ $sql = "INSERT INTO decks (nome_deck, formato, cores, estrategia, carta_principa
 // Executa e valida
 if ($conexao->query($sql) === TRUE) {
     echo "<h2>Deck registrado com sucesso na sua coleção!</h2>";
-    echo "<br><a href='index_2.html'>Voltar ao registro</a>";
+    echo "<br><a href='index.html'>Voltar ao registro</a>";
 } else {
     echo "Erro ao registrar o deck: " . $conexao->error;
 }
